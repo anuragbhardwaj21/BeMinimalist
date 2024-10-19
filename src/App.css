@@ -1,0 +1,332 @@
+:root {
+  --black: #111111;
+  --grey: #626262;
+  --greylight: #f1f1f1;
+  --white: #fff;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 6vh;
+}
+.loginform,
+.signupform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  text-align: center;
+  margin-top: 4em;
+}
+.loginform form,
+.signupform form {
+  margin: auto;
+  margin-bottom: 4em;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+}
+.loginform input,
+.signupform input {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 3px;
+  border: 0.5px solid var(--grey);
+}
+.loginform input:focus,
+.signupform input:focus {
+  outline: none;
+}
+.loginform input:nth-child(4),
+.signupform input:nth-child(4) {
+  background-color: var(--black);
+  color: white;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.loginform input:nth-child(4):hover,
+.signupform input:nth-child(4):hover {
+  background-color: var(--grey);
+}
+.loginform input:nth-child(4):disabled,
+.signupform input:nth-child(4):disabled {
+  background-color: var(--grey);
+  cursor: not-allowed;
+}
+.loginform a,
+.signupform a {
+  font-size: medium;
+  color: var(--black);
+}
+.pagenotfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  padding: 5em;
+}
+.pagenotfound a {
+  text-decoration: none;
+  background-color: var(--black);
+  padding: 0.8em 2em;
+  color: var(--white);
+  transition: 0.25s ease-in-out;
+}
+.productpageheader {
+  width: 35%;
+  margin: auto;
+  text-align: center;
+  padding: 3.5em;
+}
+.productpageheader p {
+  font-size: small;
+  color: var(--black);
+  line-height: 1.5em;
+}
+.avatareditbutton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  column-gap: 1em;
+}
+.avatareditbutton:hover {
+  background-color: var(--grey);
+}
+.productContainer {
+  margin: auto;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
+  column-gap: 1em;
+}
+.loading-message {
+  text-align: center;
+  font-size: xx-large;
+}
+.notifyErrorWithButton {
+  display: flex;
+  align-items: center;
+}
+.paginationAndrow {
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.row-count,
+.pagination {
+  padding: 0.5em;
+  font-size: large;
+}
+.row-count select {
+  padding: 0.5em 1em;
+  font-size: large;
+  border: 0.5px solid var(--black);
+}
+
+.pagination button {
+  padding: 0.5em 1em;
+  margin: 4px;
+  background-color: var(--white);
+  color: var(--black);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  border: 0.5px solid var(--black);
+}
+.pagination button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.page-number.active {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+/* AvatarEdit.css */
+
+.editavatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  width: 100%;
+}
+
+.controls label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  font-size: 12px;
+}
+
+.controls select,
+.controls input[type="color"],
+.controls input[type="checkbox"] {
+  flex: 1;
+  padding: 0.25em;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid var(--greylight);
+}
+
+.controls input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.avatar-container .controls select,
+.avatar-container .controls input {
+  /* margin-top: 0.5em; */
+}
+
+.controls label input[type="text"],
+.controls label select {
+  flex: 1;
+}
+
+.avatar-container {
+  /* margin: 0 auto; */
+}
+
+.controls label {
+  /* margin-bottom: 0.5em; */
+}
+
+.controls input[type="color"] {
+  padding: 0;
+  width: 100%;
+  height: 2em;
+}
+
+.controls input[type="text"],
+.controls select {
+  padding: 0.5em;
+}
+
+.controls input[type="checkbox"] {
+  /* margin-left: 0; */
+  height: 1em;
+  width: 1em;
+}
+
+.avatar-container {
+  text-align: center;
+  display: flex;
+}
+.avatarSaveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  column-gap: 1em;
+}
+.avatarSaveButton:hover {
+  background-color: var(--grey);
+}
+.avatar-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 80em;
+  padding: 2em;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.controls {
+  background: white;
+  padding: 3em;
+  width: 25%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.checkoutPage {
+  width: 100%;
+  display: flex;
+}
+.leftCheckout,
+.rightCheckout {
+  width: 50%;
+}
+.rightCheckout {
+  display: flex;
+}
+
+.accountPage {
+  height: 80vh;
+
+  margin-top: 1em;
+}
+.top-section-accountpage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10%;
+}
+.account-container {
+  display: flex;
+  height: 85%;
+}
+.left-menu-accountpage {
+  width: 20%;
+  border-right: 0.5px solid var(--grey);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-menu-accountpage div {
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  padding: 10px;
+  height: 5%;
+  display: flex;
+  align-items: center;
+}
+.menu-item.active {
+  background-color: var(--greylight);
+}
+.left-menu-accountpage div:hover {
+  background-color: var(--greylight);
+}
+
+.right-content-accountpage {
+  width: 80%;
+  padding: 10px;
+  height: 90%;
+  margin: auto;
+  display: flex;
+}

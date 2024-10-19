@@ -1,0 +1,68 @@
+.address-form {
+  max-width: 500px;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.address-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 0.5px solid var(--greylight);
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.25s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: var(--grey);
+  outline: none;
+}
+
+button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  column-gap: 1em;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--grey);
+}
+
+
+@media (max-width: 480px) {
+  .address-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}

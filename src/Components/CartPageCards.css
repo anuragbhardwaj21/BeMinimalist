@@ -1,0 +1,40 @@
+.checkoutCardContainer {
+  border-right: .5px solid var(--grey);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: grid;
+  gap: 1em;
+}
+.checkoutCard {
+  width: 70%;
+  margin: auto;
+  padding: 1em;
+  transition: 0.25s ease-in-out;
+}
+.checkoutCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cart-quantity-control {
+  width: 8rem;
+  border: 0.5px solid var(--grey);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.cart-quantity-control button {
+  padding: 0.5em 1em;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-cart-item-details{
+    margin: auto;
+}

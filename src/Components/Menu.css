@@ -1,0 +1,30 @@
+.hamburgermenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hamburgermenu a {
+  text-decoration: none;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--white);
+  transition: 0.25s ease-in-out;
+}
+.hamburgermenu a:hover{
+  color: var(--grey);
+}
+.hamburgermenu.open a:nth-child(3){
+    color: var(--grey);
+}
+.hamburgermenu.closed a:first-child{
+    color: var(--grey);
+}
+.menuspecialbutton{
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+}

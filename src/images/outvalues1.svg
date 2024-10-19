@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-4" transform="translate(-876.000000, -1063.000000)">
+            <g id="Group" transform="translate(876.000000, 1063.000000)">
+                <circle id="Oval" stroke="#222222" stroke-width="12" cx="199.5" cy="100.5" r="94.5"></circle>
+                <circle id="Oval-Copy" stroke="#222222" stroke-width="12" cx="100.5" cy="199.5" r="94.5"></circle>
+                <path d="M161,275 L141,287 L60,287 L50,275 L161,275 Z M171,255 L168,267 L32,267 L30,255 L171,255 Z M184,235 L184,247 L18,247 L18,235 L184,235 Z M193,215 L193,227 L8,227 L8,215 L193,215 Z M199,195 L199,207 L1,207 L1,195 L199,195 Z" id="Combined-Shape" fill="#222222"></path>
+                <path d="M155,175 L155,187 L49,187 L49,175 L155,175 Z M177,155 L177,167 L27,167 L27,155 L177,155 Z M190,135 L190,147 L15,147 L15,135 L190,135 Z M197,115 L197,127 L6,127 L6,115 L197,115 Z" id="Combined-Shape" fill="#222222" transform="translate(101.500000, 151.000000) rotate(180.000000) translate(-101.500000, -151.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
