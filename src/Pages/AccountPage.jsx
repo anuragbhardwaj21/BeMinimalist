@@ -8,21 +8,10 @@ import { Address } from "../Components/Address";
 import { AvatarEdit } from "./AvatarEdit";
 
 export const AccountPage = () => {
-  const navigate = useNavigate();
-
   const [activeSection, setActiveSection] = useState("orders");
-  let isAuthenticated = useSelector((state) =>
-    state?.Login?.userData?.username ? true : false
-  );
 
   const { name } = useSelector((store) => store?.Login?.userData);
   document.title = `${name}`;
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login");
-    }
-  }, [isAuthenticated]);
 
   return (
     <>

@@ -35,7 +35,7 @@ export const AvatarEdit = () => {
         const parsedConfig = JSON.parse(configFromLS);
         setConfig((prevConfig) => ({
           ...prevConfig,
-          ...parsedConfig, // Merge with the previous config to maintain defaults
+          ...parsedConfig,
         }));
       } catch (error) {
         console.warn("Invalid JSON data in localStorage:", error);
@@ -59,7 +59,6 @@ export const AvatarEdit = () => {
         callback: (data) => {
           if (data?.meta?.code === 200) {
             setConfig(data?.data);
-            // navigate('/account')
           }
         },
       })

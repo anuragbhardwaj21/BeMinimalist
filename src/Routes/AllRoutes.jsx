@@ -12,8 +12,14 @@ import { AccountPage } from "../Pages/AccountPage";
 import { ProductDetailPage } from "../Pages/ProductDetailPage";
 import { AvatarEdit } from "../Pages/AvatarEdit";
 import { Checkout } from "../Pages/Checkout";
+import { useSelector } from "react-redux";
+import ProtectedRoute from "./ProtectedRoute";
 
 const AllRoutes = () => {
+  let isAuthenticated = useSelector((state) =>
+    state?.Login?.userData?.username ? true : false
+  );
+
   return (
     <Router>
       <Routes>
@@ -24,8 +30,16 @@ const AllRoutes = () => {
         <Route exact path="/collections/skin" element={<Skin />} />
         <Route exact path="/collections/hair" element={<Hair />} />
         <Route exact path="/collections/bathnbody" element={<BathNBody />} />
-        <Route exact path="/account" element={<AccountPage />} />
-        <Route exact path="/checkout" element={<Checkout />} />
+        <Route
+          exact
+          path="/account"
+          element={<ProtectedRoute element={<AccountPage />} />}
+        />
+        <Route
+          exact
+          path="/checkout"
+          element={<ProtectedRoute element={<Checkout />} />}
+        />
         <Route
           exact
           path="/allproducts/:productId"
