@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ProductCard.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getSingleProduct, postCartProduct } from "../Redux/action";
+// import { getSingleProduct, postCartProduct } from "../Redux/action";
 import { useNavigate } from "react-router-dom";
 import { notifyErrorWithButton } from "../Utils/helper";
 import { addToCart } from "../Redux/Action/cart/cartAction";
@@ -44,7 +44,7 @@ export const ProductCard = ({ product }) => {
   };
 
   const redirectToDetailPage = (productId) => {
-    dispatch(getSingleProduct(productId));
+    // dispatch(getSingleProduct(productId));
     navigate(`/allproducts/${productId}`);
   };
 

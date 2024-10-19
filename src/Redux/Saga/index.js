@@ -8,6 +8,8 @@ import GetBathNBodyProduct from "./product/bathNBodyProductSaga";
 import GetAllProduct from "./product/allProductSaga";
 import CartSaga from "./cart/cartSaga";
 import AvatarSaga from "./avatar/avatarSaga";
+import GetAddress from "./address/getAddressSaga"
+import PostAddress from "./address/postAddressSaga"
 
 export default function* rootSaga() {
   yield all([
@@ -20,5 +22,7 @@ export default function* rootSaga() {
     GetAllProduct(),
     CartSaga(),
     AvatarSaga(),
+    GetAddress(),
+    PostAddress()
   ]);
 }

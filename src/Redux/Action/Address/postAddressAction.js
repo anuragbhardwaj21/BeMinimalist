@@ -2,7 +2,7 @@ import {
   POST_ADDRESS,
   POST_ADDRESS_SUCCESS,
   POST_ADDRESS_FAILURE,
-} from "./../actionTypes";
+} from "../actionTypes";
 
 export const postAddress = (payload) => ({
   type: POST_ADDRESS,

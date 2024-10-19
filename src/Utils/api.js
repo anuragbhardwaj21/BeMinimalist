@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getLocalStorageItem, removeLocalStorageItem } from "./helper";
+import { getLocalStorageItem, notifyError, notifyErrorWithButton, removeLocalStorageItem } from "./helper";
 
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
@@ -20,6 +20,7 @@ api.interceptors.response.use(
   function (error) {
     console.log(error, "error");
     if (error?.response?.status === 401) {
+      notifyError("Please login again.")
       removeLocalStorageItem("token");
       removeLocalStorageItem("userData");
       removeLocalStorageItem("cartData");

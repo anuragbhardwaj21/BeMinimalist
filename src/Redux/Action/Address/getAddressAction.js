@@ -2,10 +2,11 @@ import {
   GET_ADDRESS,
   GET_ADDRESS_SUCCESS,
   GET_ADDRESS_FAILURE,
-} from "./../actionTypes";
+} from "../actionTypes";
 
-export const getAddress = () => ({
+export const getAddress = (payload) => ({
   type: GET_ADDRESS,
+  payload
 });
 
 export const getAddressSuccess = (payload) => ({
