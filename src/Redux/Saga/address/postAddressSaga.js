@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 import {
   postAddressSuccess,
   postAddressFailure,
-} from "../../Action/address/postAddressAction";
+} from "../../Action/address/postAddressAction.js";
 import { POST_ADDRESS } from "../../Action/actionTypes";
 
 export const notifyPromise = (
