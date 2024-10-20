@@ -18,15 +18,18 @@ export const Address = () => {
   });
 
   useEffect(() => {
+    console.log("useEffect triggered");
     dispatch(
       getAddress({
         address,
         callback: (data) => {
-          setSavedAddress(data)
+          setSavedAddress(data?.data);
+          console.log(data?.data);
         },
       })
     );
-  }, [dispatch]);
+  }, []); // Ensure it's empty
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;

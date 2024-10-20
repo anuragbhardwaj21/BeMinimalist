@@ -3,7 +3,7 @@ import API from "../../../Utils/api";
 import {
   getAddressFailure,
   getAddressSuccess,
-} from "../../Action/address/getAddressAction.js"
+} from "../../Action/address/getAddressAction"
 import { GET_ADDRESS } from "../../Action/actionTypes";
 
 function* getAddressRequest(action) {
