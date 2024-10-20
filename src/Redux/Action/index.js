@@ -7,5 +7,5 @@ export * from "./product/bathNBodyProductAction";
 export * from "./product/allProductAction";
 export * from "./cart/cartAction";
 export * from "./avatar/avatarAction";
-export * from "./Address/getAddressAction"
-export * from "./Address/postAddressAction"
+export * from "./address/getAddressAction"
+export * from "./address/postAddressAction"

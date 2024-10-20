@@ -29,7 +29,7 @@ export const Address = () => {
     );
   }, []);
 
-  console.log(savedAddress);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;

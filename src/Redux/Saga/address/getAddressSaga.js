@@ -3,12 +3,12 @@ import API from "../../../Utils/api";
 import {
   getAddressFailure,
   getAddressSuccess,
-} from "../../Action/address/getAddressAction"
+} from "../../Action/address/getAddressAction";
 import { GET_ADDRESS } from "../../Action/actionTypes";
 
 function* getAddressRequest(action) {
   try {
-    const { data } = yield API.get("/getaddress");
+    const { data } = yield call(API.get, "/getaddress");
 
     if (data?.meta?.code === 200) {
       yield put(getAddressSuccess(data?.data));

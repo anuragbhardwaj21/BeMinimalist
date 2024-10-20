@@ -22,19 +22,20 @@ export const notifyPromise = (
 
 function* postAddressRequest(action) {
   try {
-    const { data } = yield notifyPromise(
-      API.post("/postaddress", action.payload),
-      "Adding address...",
-      (data) => `${data?.meta?.message || "Address added successfully."}`,
-      (err) =>
-        `${err?.response?.data?.error?.message || "Failed to add address"}`
+    const { data } = yield call(() =>
+      notifyPromise(
+        API.post("/postaddress", action.payload),
+        "Adding address...",
+        (data) => `${data?.meta?.message || "Address added successfully."}`,
+        (err) => `${err?.response?.data?.error?.message || "Failed to add address"}`
+      )
     );
 
     if (data?.meta?.code === 200) {
       yield put(postAddressSuccess(data?.data));
 
       if (action?.payload?.callback) {
-        yield call(action?.payload?.callback, data);
+        yield call(action.payload.callback, data);
       }
     } else {
       yield put(postAddressFailure());
