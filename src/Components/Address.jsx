@@ -6,7 +6,7 @@ import { getAddress } from "../Redux/Action/address/getAddressAction";
 
 export const Address = () => {
   const dispatch = useDispatch();
-  const [savedAddress, setSavedAddress] = useState([])
+  const [savedAddress, setSavedAddress] = useState([]);
   const [address, setAddress] = useState({
     title: "",
     addline1: "",
@@ -18,7 +18,6 @@ export const Address = () => {
   });
 
   useEffect(() => {
-    console.log("useEffect triggered");
     dispatch(
       getAddress({
         address,
@@ -28,8 +27,9 @@ export const Address = () => {
         },
       })
     );
-  }, []); // Ensure it's empty
-  
+  }, []);
+
+  console.log(savedAddress);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,8 +44,7 @@ export const Address = () => {
     dispatch(
       postAddress({
         address,
-        callback: (data) => {
-        },
+        callback: (data) => {},
       })
     );
   };
